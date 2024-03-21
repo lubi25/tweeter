@@ -1,0 +1,12 @@
+header {
+  position: relative;
+  top: 120px;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgoldenrod;
+  background-image: url("../images/dimension.png");
+}
