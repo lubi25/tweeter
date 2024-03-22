@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.new-tweet textarea {
+  padding: 10px;
+  margin: 10px 0px;
+}
+
 #tweet-text {
   width: 100%;
   background-color: inherit;
@@ -23,4 +28,9 @@
   padding: 4px 12px 2px 10px;
   text-transform: uppercase;
   color: #ffffff;
+  transition: all 0.25s ease;
+}
+
+.post-new-tweet button:hover {
+  background: oklch(from #4056A1 calc(l * 1.25) c h);
 }
