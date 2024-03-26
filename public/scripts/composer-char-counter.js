@@ -1,7 +1,9 @@
 $(document).ready(function() {
   $('.new-tweet textarea').on('input', function() {
-    var charCount = $(this).val().length;
-    var remainingChars = 140 - charCount;
-    $(this).closest('form').find('.counter').text(remainingChars);
+    let charCount = $(this).val().length;
+    let remainingChars = 140 - charCount;
+    let counter = $(this).closest('form').find('.counter')
+    
+    counter.text(remainingChars);
   });
 });
