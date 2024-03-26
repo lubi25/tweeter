@@ -5,5 +5,11 @@ $(document).ready(function() {
     let counter = $(this).closest('form').find('.counter')
     
     counter.text(remainingChars);
+
+    if (remainingChars < 0) {
+      counter.css('color', 'red');
+    } else {
+      counter.css('color', 'red');
+    }
   });
 });
