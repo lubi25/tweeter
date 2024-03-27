@@ -32,5 +32,5 @@
 }
 
 .post-new-tweet button:hover {
-  background: oklch(from #4056A1 calc(l * 1.25) c h);
+  background: #6676aa;
 }

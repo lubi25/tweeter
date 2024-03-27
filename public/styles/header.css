@@ -6,6 +6,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: darkgoldenrod;
+  background-color: #c97eaa;
   background-image: url("../images/dimension.png");
 }
