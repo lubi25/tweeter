@@ -66,6 +66,29 @@ function renderTweets(tweets) {
   });
 }
 
+function postTweet(formData) {
+  $.ajax({
+    type: "POST",
+    url: "/tweets",
+    data: formData,
+    success: function(response) {
+      $('#tweet-text').val('');
+      console.log('Tweet posted successfully!');
+    },
+    error: function(xhr, status, error) {
+      console.log('An error occurred. Please try again later.');
+    }
+  });
+}
+
 $(document).ready(function() {
   renderTweets(data);
+
+  $('.new-tweet form').on('submit', function(e) {
+    e.preventDefault();
+
+    var formData = $(this).serialize();
+
+    postTweet(formData);
+  });
 });
