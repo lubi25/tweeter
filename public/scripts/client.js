@@ -62,7 +62,7 @@ function createTweetElement(tweetData) {
 function renderTweets(tweets) {
   tweets.forEach(tweetEntry => {
     const $newTweetEntry = createTweetElement(tweetEntry);
-    $('#tweets-container').append($newTweetEntry);
+    $('#tweets-container').prepend($newTweetEntry);
   });
 }
 
