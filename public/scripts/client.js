@@ -68,5 +68,4 @@ function renderTweets(tweets) {
 
 $(document).ready(function() {
   renderTweets(data);
-  console.log(data);
 });
