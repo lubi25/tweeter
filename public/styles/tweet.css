@@ -34,7 +34,7 @@
 }
 
 /* TWEETS */
-.tweet section {
+.tweet article {
   width: 100%;
   background-color: inherit;
   border: 0px solid transparent;
