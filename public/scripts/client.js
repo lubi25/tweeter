@@ -31,10 +31,15 @@ function createTweetElement() {
     </footer>
   </section>
   `;
-  
   return $tweet;
 }
 
+function renderTweets(tweets) {
+  tweets.forEach(tweetEntry => {
+    const $newTweetEntry = createTweetElement(tweetEntry);
+    $('#tweets-container').append($newTweetEntry);
+  });
+}
 
 const tweetData = {
   "user": {
