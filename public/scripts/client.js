@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-function createTweetElement(tweetData) {
+function createTweetElement() {
   let $tweet = `
     <section class="tweet">
     <header>
@@ -48,9 +48,8 @@ const tweetData = {
   "created_at": 1461116232227
 }
 
-const $tweet = createTweetElement(tweetData);
-
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
-
-$('#tweets-container').append($tweet);
+$(document).ready(function() {
+  const $tweet = createTweetElement(tweetData);
+  console.log($tweet);
+  $('#tweets-container').append($tweet);
+});
