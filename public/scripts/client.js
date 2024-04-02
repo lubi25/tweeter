@@ -62,8 +62,16 @@ $(document).ready(function() {
   $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
     var formData = $(this).serialize();
-    postTweet(formData);
-  });
+    var tweetText = $(this).find('textarea[name="text"]').val();
+  
+    if (tweetText.length === 0) {
+      alert('No content submitted');
+    } else if (tweetText.length > 140) {
+      alert('Tweet is too long');
+    } else {
+      postTweet(formData);
+    }
+  });  
 
   function loadTweets() {
     $.ajax('/tweets', {
