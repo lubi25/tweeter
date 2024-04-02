@@ -61,17 +61,17 @@ function postTweet(formData) {
 $(document).ready(function() {
   $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
-    var formData = $(this).serialize();
-    var tweetText = $(this).find('textarea[name="text"]').val();
+    var tweetTextArea = $(this).find('textarea[name="text"]');
+    var tweetText = tweetTextArea.val().trim();
   
     if (tweetText.length === 0) {
-      alert('No content submitted');
+      alert('No tweet submitted!');
     } else if (tweetText.length > 140) {
-      alert('Tweet is too long');
+      alert('Tweet is too long!');
     } else {
-      postTweet(formData);
+      postTweet($(this).serialize());
     }
-  });  
+  });
 
   function loadTweets() {
     $.ajax('/tweets', {
