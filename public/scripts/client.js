@@ -4,9 +4,15 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 function createTweetElement(tweetData) {
   const timeAgo = timeago.format(tweetData.created_at); 
+  const escapedTweetText = escape(tweetData.content.text);
 
   let $tweet = `
     <section class="tweet">
@@ -22,7 +28,7 @@ function createTweetElement(tweetData) {
       </div>
     </header>
     <article>
-      ${tweetData.content.text}
+      ${escapedTweetText}
     </article>
     <footer>
       <span class="tweet-time">
