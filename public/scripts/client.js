@@ -80,6 +80,7 @@ $(document).ready(function() {
       success: function(receivedTweets) {
         renderTweets(receivedTweets);
         console.log('Tweets retrieved!');
+        setTimeout(loadTweets, 1000);
       },
       error: function(xhr, status, error) {
         console.log('An error occurred when retrieving tweets. Please try again later.');
