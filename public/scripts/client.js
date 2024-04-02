@@ -67,9 +67,8 @@ function renderTweets(tweets) {
 }
 
 function postTweet(formData) {
-  $.ajax({
-    type: "POST",
-    url: "/tweets",
+  $.ajax('/tweets', {
+    method: "POST",
     data: formData,
     success: function(response) {
       $('#tweet-text').val('');
