@@ -75,7 +75,9 @@ $(document).ready(function() {
     } else if (tweetText.length > 140) {
       alert('Tweet is too long!');
     } else {
+      $(this).closest('section').find('#tweets-container').html("BLAHBLAH");
       postTweet($(this).serialize());
+      loadTweets();
     }
   });
 
@@ -84,9 +86,10 @@ $(document).ready(function() {
       method: "GET",
       dataType: "json",
       success: function(receivedTweets) {
+        const $tweetsContainer = $('#tweets-container');
+        $tweetsContainer.empty();
         renderTweets(receivedTweets);
         console.log('Tweets retrieved!');
-        setTimeout(loadTweets, 1000);
       },
       error: function(xhr, status, error) {
         console.log('An error occurred when retrieving tweets. Please try again later.');
