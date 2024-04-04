@@ -75,9 +75,11 @@ $(document).ready(function() {
     } else if (tweetText.length > 140) {
       alert('Tweet is too long!');
     } else {
-      $(this).closest('section').find('#tweets-container').html("BLAHBLAH");
       postTweet($(this).serialize());
       loadTweets();
+
+      let counter = $(this).find('.counter');
+      counter.text('140');
     }
   });
 
