@@ -64,6 +64,27 @@ function postTweet(formData) {
   });
 }
 
+function loadTweets() {
+  $.ajax('/tweets', {
+    method: "GET",
+    dataType: "json",
+    success: function(receivedTweets) {
+      const $tweetsContainer = $('#tweets-container');
+      $tweetsContainer.empty();
+      renderTweets(receivedTweets);
+      console.log('Tweets retrieved!');
+    },
+    error: function(xhr, status, error) {
+      console.log('An error occurred when retrieving tweets. Please try again later.');
+    }
+  });
+}
+
+function counterReset() {
+  let counter = $('.counter');
+  counter.text('140');
+}
+
 $(document).ready(function() {
   $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
@@ -77,27 +98,9 @@ $(document).ready(function() {
     } else {
       postTweet($(this).serialize());
       loadTweets();
-
-      let counter = $(this).find('.counter');
-      counter.text('140');
+      counterReset();
     }
   });
-
-  function loadTweets() {
-    $.ajax('/tweets', {
-      method: "GET",
-      dataType: "json",
-      success: function(receivedTweets) {
-        const $tweetsContainer = $('#tweets-container');
-        $tweetsContainer.empty();
-        renderTweets(receivedTweets);
-        console.log('Tweets retrieved!');
-      },
-      error: function(xhr, status, error) {
-        console.log('An error occurred when retrieving tweets. Please try again later.');
-      }
-    });
-  }
 
   loadTweets();
 });
