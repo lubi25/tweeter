@@ -34,3 +34,15 @@
 .post-new-tweet button:hover {
   background: #6676aa;
 }
+
+.error {
+  margin: 50px 0px;
+  padding: 10px 20px;
+  color: red;
+  border: 5px solid red;
+  display: none;
+}
+
+.error.active {
+  display: block;
+}
