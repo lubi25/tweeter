@@ -96,13 +96,13 @@ $(document).ready(function() {
       $(".error").slideDown(500).addClass("active");
       error.text('No tweet submitted!');
       $('.new-tweet form').on("keypress", function() {
-        $(".error").slideUp(500);
+        $(".error").slideUp(500).removeClass("active");
       });
     } else if (tweetText.length > 140) {
       $(".error").slideDown(500).addClass("active");
       error.text('Tweet is too long!');
       $('.new-tweet form').on("keypress", function() {
-        $(".error").slideUp(500);
+        $(".error").slideUp(500).removeClass("active");
       });
     } else {
       postTweet($(this).serialize());
