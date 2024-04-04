@@ -15,5 +15,12 @@ nav span {
   font-family: 'Bungee', sans-serif;
 }
 
-/* Added nav-right for further styling later (not yet part of assignment)
-.nav-right { } */
+/* Added nav-right for further styling later (not yet part of assignment) */
+.nav-right { 
+  font: 18px 'Source Sans 3', sans-serif;
+  text-align: center;
+}
+
+.nav-right i {
+  color: #c97eaa;
+}
