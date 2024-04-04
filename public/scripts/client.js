@@ -88,13 +88,22 @@ function counterReset() {
 $(document).ready(function() {
   $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
-    var tweetTextArea = $(this).find('textarea[name="text"]');
-    var tweetText = tweetTextArea.val().trim();
+    let tweetTextArea = $(this).find('textarea[name="text"]');
+    let tweetText = tweetTextArea.val().trim();
+    let error = $('.error');
   
     if (tweetText.length === 0) {
-      alert('No tweet submitted!');
+      $(".error").slideDown(500).addClass("active");
+      error.text('No tweet submitted!');
+      $('.new-tweet form').on("keypress", function() {
+        $(".error").slideUp(500);
+      });
     } else if (tweetText.length > 140) {
-      alert('Tweet is too long!');
+      $(".error").slideDown(500).addClass("active");
+      error.text('Tweet is too long!');
+      $('.new-tweet form').on("keypress", function() {
+        $(".error").slideUp(500);
+      });
     } else {
       postTweet($(this).serialize());
       loadTweets();
