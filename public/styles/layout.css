@@ -31,3 +31,31 @@ body {
   width: 90%;
   background-color: inherit;
  }
+
+ .flex {
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+/* Responsive design elements */
+
+@media only screen and (min-width: 1024px) {
+  .flex {
+    padding: 50px; 
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .flex header {
+    width: 40%;
+  }
+
+  .flex main {
+    width: 60%;
+  }
+
+  .container {
+    padding-left: 50px;
+    margin-top: 100px;
+  }
+}
