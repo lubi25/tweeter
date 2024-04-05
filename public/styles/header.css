@@ -9,3 +9,12 @@ header {
   background-color: #c97eaa;
   background-image: url("../images/dimension.png");
 }
+
+header h2 {
+  color: white;
+  font-weight: 300;
+}
+
+header h2 b {
+  font-weight: 700;
+}
