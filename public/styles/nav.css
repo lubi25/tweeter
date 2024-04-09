@@ -15,7 +15,6 @@ nav span {
   font-family: 'Bungee', sans-serif;
 }
 
-/* Added nav-right for further styling later (not yet part of assignment) */
 .nav-right { 
   font: 18px 'Source Sans 3', sans-serif;
   text-align: center;
@@ -24,6 +23,11 @@ nav span {
 .nav-right i {
   color: #c97eaa;
 }
+
+
+/*
+ * Responsive design elements
+ */
 
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
   nav {

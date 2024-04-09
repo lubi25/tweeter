@@ -37,7 +37,10 @@ body {
   flex-wrap: wrap;
  }
 
-/* Responsive design elements */
+ 
+/*
+ * Responsive design elements
+ */
 
 @media only screen and (min-width: 1024px) {
   .flex {
