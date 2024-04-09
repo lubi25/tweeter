@@ -95,13 +95,13 @@ $(document).ready(function() {
     if (tweetText.length === 0) {
       $(".error").slideDown(500).addClass("active");
       error.text('No tweet submitted!');
-      $('.new-tweet form').on("keypress", function() {
+      $('.new-tweet form').on("submit", function() {
         $(".error").slideUp(500).removeClass("active");
       });
     } else if (tweetText.length > 140) {
       $(".error").slideDown(500).addClass("active");
       error.text('Tweet is too long!');
-      $('.new-tweet form').on("keypress", function() {
+      $('.new-tweet form').on("submit", function() {
         $(".error").slideUp(500).removeClass("active");
       });
     } else {
