@@ -1,18 +1,42 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, responsive single-page Twitter clone created as a front-end project for Lighthouse Lab's Web Development bootcamp. Users can submit a message of up to 140 characters on the page. Random user information is generated upon form submission and updated on the page with AJAX.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Features
+
+- **Tweet Validation**: The app validates whether a tweet meets the submission rules (must be fewer than 140 characters).
+- **Error Display**: A message with validation errors is displayed upon submission error (e.g., no tweet submitted, message too long).
+- **Automatic Tweet Reload**: Existing tweets reload automatically upon submission of a new tweet.
+
+## Final Product
+!["Screenshot of layout for desktop"](/docs/tweeter-layout-desktop.png)
+!["Screenshot of layout for tablet"](/docs/tweeter-layout-tablet.png)
+!["Screenshot of tweet submission form"](/docs/tweet-form.png)
+!["Screenshot of submitted tweet"](/docs/tweet-box.png)
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+Follow these steps to get Tweeter up and running on your local machine:
 
-## Dependencies
+1. Clone the repository:
+```https://github.com/lubi25/tweeter.git```
 
+2. Dependencies:
+- Node.js
 - Express
-- Node 5.10.x or above
+- Body parser
+- Chance
+- md5
+
+3. Install dependencies:
+```npm install```
+
+3. Start the application:
+```npm start local```
+
+4. Open your web browser and navigate to `http://localhost:8080` to access Tweeter.
+
+## Technologies Used
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Node.js, Express.js
